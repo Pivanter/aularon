@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Классы | Заря Ауларона</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="site-title">
+      <img src="img/logo.svg" alt="logo" class="site-logo">
+      ЗАРЯ АУЛАРОНА
+    </div>
+    <nav>
+      <a href="index.html" class="nav-btn">Главная</a>
+      <a href="about.html" class="nav-btn">О мире</a>
+      <a href="races.html" class="nav-btn">Виды</a>
+      <a href="classes.html" class="nav-btn active">Классы</a>
+      <a href="backgrounds.html" class="nav-btn">Предыстории</a>
+      <a href="traits.html" class="nav-btn">Черты</a>
+      <a href="enchants.html" class="nav-btn">Зачарования</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <main>
+    <section class="welcome-box">
+      <h1>Классы</h1>
+    <p>Класс персонажа - не просто профессия. Это его призвание, класс определяет, что вы думаете о мире, как взаимодействуете с ним, другими существами и силами вселенной. 
+    Ваш класс даёт вам ряд особенностей по мере вашего развития.</p>
+    <div class="class-buttons-list">
+      <button class="class-btn class-link" data-href="class-paladin.html">Паладин</button>
+      <button class="class-btn class-link" data-href="class-warrior.html">Воин</button>
+      <button class="class-btn class-link" data-href="class-mage.html">Маг</button>
+      <button class="class-btn class-link" data-href="class-rogue.html">Плут</button>
+      <button class="class-btn class-link" data-href="class-operator.html">Оператор брони</button>
+    </div>
+    </section>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.class-link').forEach(function(btn) {
+          btn.addEventListener('click', function() {
+            const href = btn.getAttribute('data-href');
+            if (href) {
+              window.location.href = href;
+            }
+          });
+        });
+      });
+    </script>
+  </main>
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+      }
+    });
+  </script>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <img src="img/framelogo.svg" class="site-frame-logo">
+      <p>
+        <a href="mailto:robertpopit@gmail.com">robertpopit@gmail.com</a> | 
+        <a href="https://t.me/yourtelegram" target="_blank">Telegram</a>
+        <!-- Добавьте другие контакты по желанию -->
+      </p>
+      <p>© 2025 Заря Ауларона</p>
+    </div>
+  </footer>
+</body>
+</html> 

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зачарования | Заря Ауларона</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="site-title">
+      <img src="img/logo.svg" alt="logo" class="site-logo">
+      ЗАРЯ АУЛАРОНА
+    </div>
+    <nav>
+      <a href="index.html" class="nav-btn">Главная</a>
+      <a href="about.html" class="nav-btn">О мире</a>
+      <a href="races.html" class="nav-btn">Виды</a>
+      <a href="classes.html" class="nav-btn">Классы</a>
+      <a href="backgrounds.html" class="nav-btn">Предыстории</a>
+      <a href="traits.html" class="nav-btn">Черты</a>
+      <a href="enchants.html" class="nav-btn active">Зачарования</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <main>
+    <section class="welcome-box">
+      <h1>Магические зачарования</h1>
+      <p>Зачарования — это особая магия, вложенная в предметы, которая даёт им уникальные свойства. 
+        Они могут усиливать ваши способности, защищать от опасностей или даже изменять окружающий мир.</p>
+      <p>Прежде чем наложить на предмет зачарование вам необходимо повысить ёмкость магического энергохранилища предмета. 
+        Другими словами – создать слот под зачарование. Каждое новое зачарование требует отдельный слот. Всего ёмкость одного 
+        предмета может достигать пять слотов. При этом каждый новый слот стоит больше предыдущего.</p>
+        <table class="class-table" style="max-width:600px; margin-left:auto; margin-right:auto;">
+          <thead>
+              <tr>
+                  <th>Уровень слота</th>
+                  <th>Стоимость (в марках)</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr><td>Первый слот</td><td>200</td></tr>
+              <tr><td>Второй слот</td><td>1000</td></tr>
+              <tr><td>Третий слот</td><td>5000</td></tr>
+              <tr><td>Четвёртый слот</td><td>10000</td></tr>
+              <tr><td>Пятый слот</td><td>50000</td></tr>
+          </tbody>
+      </table>
+      <p>На использование зачарований тратится заряды внутреннего энергохранилища предмета. Каждый новый слот добавляет +2 к ёмкости хранилища. 
+        Таким образом на первом уровне ёмкость составляет 2 единицы, а на пятом – 10 единиц. Заряд восстанавливается в течение суток после использования.</p>
+      <p>Зачарования делятся на <b>активные</b> и <b>пассивные</b>:</p>
+      <ul>
+        <li>Активные тратят 1 единицу магического заряда при использовании.</li>
+        <li>Пассивные постоянно расходуют 1 единицу заряда.</li>
+      </ul>
+      <p>Стоит отметить, что чары одного типа не могут быть наложены на предмет более одного раза. Например, нельзя несколько раз зачаровать предмет на 
+        Крепость (+1 КД), чтобы в результате получить +5 КД, или Родство со стихией, чтобы получить сопротивление нескольким видам стихий единовременно.</p>
+      <table class="class-table" style="width:100%; margin-top:32px;">
+        <tr>
+          <th>Предмет</th>
+          <th>Зачарование</th>
+          <th>Цена (в марках)</th>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td rowspan="7">Оружие</td>
+          <td><b>Заряд стихии</b> (пассивное)<br><small>При нанесении урона добавляет 1к4-1к8 дополнительного стихийного урона.</small></td>
+          <td>
+            <table class="price-table">
+              <tr><td>1к4</td><td>1к6</td><td>1к8</td></tr>
+              <tr><td>500</td><td>2000</td><td>8000</td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Призрачный клинок</b> (пассивное)<br><small>Попадая атакой по противнику, вы наносите доп. урон фантомной копией вашего оружия. Призрачный клинок наносит базовый урон вашего оружия без модификаторов. При комбинации с Зарядом стихии стихийный урон наносится только основным оружием. Может быть усилена до 4-х раз.</small></td>
+          <td>
+            <table class="price-table">
+              <tr><td>1хХ</td><td>2хХ</td><td>3хХ</td><td>4хХ</td></tr>
+              <tr><td>5000</td><td>15000</td><td>30000</td><td>50000</td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Меткий удар</b> (пассивное)<br><small>Точность оружия повышается на +1.</small></td>
+          <td>3000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Привязка</b> (активное)<br><small>Оружие возвращается после броска/утери.</small></td>
+          <td>3000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Живое оружие</b> (активное)<br><small>Ваше оружие способно сражаться самостоятельно. У оружия появляется свой стат. блок, не зависящий от ваших характеристик.</small></td>
+          <td>45000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Заточка</b> (пассивное)<br><small>Ваше оружие получает постоянный бонус к урону.</small></td>
+          <td>
+            <table class="price-table">
+              <tr><td>+1</td><td>+2</td><td>+3</td></tr>
+              <tr><td>1000</td><td>2000</td><td>3000</td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Вампиризм</b> (пассивное)<br><small>При нанесении урона вы поглощаете жизненную энергию живого существа.</small></td>
+          <td>
+            <table class="price-table">
+              <tr><td>1к4</td><td>1к6</td></tr>
+              <tr><td>10000</td><td>25000</td></tr>
+            </table>
+          </td>
+        </tr>
+
+        <tr class="enchant-row odd-row">
+          <td rowspan="3">Аксессуары</td>
+          <td><b>Подготовленные чары</b> (активное)<br><small>Вы подготавливаете осколок и можете использовать его в бою бонусным действием.</small></td>
+          <td>1000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Невидимость</b> (активное)<br><small>Делает пользователя на одну минуту невидимым. Атака или активное действие снимает невидимость.</small></td>
+          <td>3000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Невидимость убийцы</b> (пассивное)<br><small>Дает невидимость при убийстве врага на 1 ход, создавая иллюзорный образ на вашем месте.</small></td>
+          <td>7500</td>
+        </tr>
+
+        <tr class="enchant-row odd-row">
+          <td rowspan="6">Перчатки</td>
+          <td><b>Идеальная контратака</b> (активное)<br><small>Если враг промахивается вы один раз за бой можете контратаковать.</small></td>
+          <td>1000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Дополнительное действие</b> (активное)<br><small>Один раз за бой вы можете превратить бонусное действие в полноценное.</small></td>
+          <td>2000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Ловкие пальцы</b> (пассивное)<br><small>Вы получаете +1 к проверке взлома замков и карманной кражи.</small></td>
+          <td>500</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Силач</b> (пассивное)<br><small>Вы получаете +1 к силе.</small></td>
+          <td>5000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Липкость</b> (активное)<br><small>Вы на 1 минуту можете прилипать к поверхностям и перемещаться по ним с вашей базовой скоростью перемещения.</small></td>
+          <td>2000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Шулер</b> (пассивное)<br><small>Вы получаете +2 к броскам или преимущество в азартных играх.</small></td>
+          <td>500</td>
+        </tr>
+
+        <tr class="enchant-row odd-row">
+          <td rowspan="7">Броня</td>
+          <td><b>Знакомство со стихией</b> (пассивное)<br><small>При получении урона избранной стихией вы получаете преимущество на спасброски против неё.</small></td>
+          <td>1000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Родство со стихией</b> (пассивное)<br><small>Вы получаете сопротивление к урону избранной стихией. При успешном прохождении спасброска против избранной стихии вы получаете четверть урона.</small></td>
+          <td>2000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Броня жизни</b> (пассивное)<br><small>В конце своего хода вы восстанавливаете 1к4/1к6/1к8 единиц здоровья.</small></td>
+          <td>
+            <table class="price-table">
+              <tr><td>1к4</td><td>1к6</td><td>1к8</td></tr>
+              <tr><td>1000</td><td>2000</td><td>5000</td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Шипы</b> (пассивное)<br><small>Враг, атакующий вас в ближнем бою, получает 1к4 урона.</small></td>
+          <td>5000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Отрицание Судьбы</b> (активное)<br><small>Вы можете перекинуть кубик если у вас выпадает "1".</small></td>
+          <td>3000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Свобода перемещения</b> (пассивное)<br><small>Снимает с брони штраф на скрытность.</small></td>
+          <td>1500</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Крепость</b> (пассивное)<br><small>Вы получаете +1 к КД.</small></td>
+          <td>2000</td>
+        </tr>
+
+        <tr class="enchant-row odd-row">
+          <td rowspan="8">Обувь</td>
+          <td><b>Несокрушимость</b> (пассивное)<br><small>Вас тяжело сдвинуть с места или опрокинуть на землю. Вы получаете +1\+2\+3 к проверкам атлетики.</small></td>
+          <td>
+            <table class="price-table">
+              <tr><td>+1</td><td>+2</td><td>+3</td></tr>
+              <tr><td>1000</td><td>2000</td><td>3000</td></tr>
+            </table>
+          </td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Силач</b> (пассивное)<br><small>Вы получаете +1 к силе.</small></td>
+          <td>5000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Ловкач</b> (пассивное)<br><small>Вы получаете +1 к ловкости.</small></td>
+          <td>5000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Проворный</b> (пассивное)<br><small>Ваша скорость увеличивается на 5 футов.</small></td>
+          <td>3000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Кузнечик</b> (активное)<br><small>Вы можете прыгнуть на 1/2/3 метра выше.</small></td>
+          <td><table class="price-table"><tr><td>1м</td><td>2м</td><td>3м</td></tr><tr><td>500</td><td>1500</td><td>3000</td></tr></table></td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Воздушная опора</b> (активное)<br><small>Прыгая, вы можете создать под ногой поверхность на 6 секунд и оттолкнуться от неё. Способность можно использовать 5 раз до короткого отдыха.</small></td>
+          <td>2000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Полет</b> (активное)<br><small>На 1 минуту на вас перестает действовать сила притяжения.</small></td>
+          <td>3000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Хождение по воде</b> (активное)<br><small>На 1 минуту вы ходите по жидким поверхностям.</small></td>
+          <td>2000</td>
+        </tr>
+
+        <tr class="enchant-row odd-row">
+          <td rowspan="7">Шлем</td>
+          <td><b>Кошка</b> (пассивное)<br><small>Позволяет видеть в темноте на 20 футов.</small></td>
+          <td>500</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Умник</b> (пассивное)<br><small>Вы получаете +1 к интеллекту.</small></td>
+          <td>5000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Мудрец</b> (пассивное)<br><small>Вы получаете +1 к мудрости.</small></td>
+          <td>5000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Разум превыше плоти</b> (активное)<br><small>Даже получив смертельный урон, вы можете двигаться 1 дополнительный раунд, и теряете сознание лишь в конце своего хода.</small></td>
+          <td>5000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Неустрашимый</b> (пассивное)<br><small>Вы получаете иммунитет к испугу.</small></td>
+          <td>5000</td>
+        </tr>
+        <tr class="enchant-row even-row">
+          <td><b>Крепость</b> (пассивное)<br><small>Вы получаете +1 к КД.</small></td>
+          <td>2000</td>
+        </tr>
+        <tr class="enchant-row odd-row">
+          <td><b>Зоркий взгляд</b> (пассивное)<br><small>Вы проходите проверки на внимание с преимуществом.</small></td>
+          <td>10000</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+      }
+    });
+  </script>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <img src="img/framelogo.svg" class="site-frame-logo">
+      <p>
+        <a href="mailto:robertpopit@gmail.com">robertpopit@gmail.com</a> | 
+        <a href="https://t.me/yourtelegram" target="_blank">Telegram</a>
+        <!-- Добавьте другие контакты по желанию -->
+      </p>
+      <p>© 2025 Заря Ауларона</p>
+    </div>
+  </footer>
+</body>
+</html> 

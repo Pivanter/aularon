@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Заря Ауларона</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="site-title">
+      <img src="img/logo.svg" alt="logo" class="site-logo">
+      ЗАРЯ АУЛАРОНА
+    </div>
+    <nav>
+      <a href="index.html" class="nav-btn active">Главная</a>
+      <a href="about.html" class="nav-btn">О мире</a>
+      <a href="races.html" class="nav-btn">Виды</a>
+      <a href="classes.html" class="nav-btn">Классы</a>
+      <a href="backgrounds.html" class="nav-btn">Предыстории</a>
+      <a href="traits.html" class="nav-btn">Черты</a>
+      <a href="enchants.html" class="nav-btn">Зачарования</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <main>
+    <picture>
+      <source srcset="img/hatmobile.png" media="(max-width: 600px)">
+      <img id="main-header-img" src="img/hat.png" alt="hat" style="width: 100%; height: auto;">
+    </picture>
+    <section class="welcome-box" id="welcome-box" style="margin-top: -5em;"> 
+      <h1>ДОБРО ПОЖАЛОВАТЬ!</h1>
+      <p>
+        Заря Ауларона - это авторский сеттинг для всемирно известной настольно ролевой игры DnD, основанный на серии книг "Избранник башни", вышедшей из под пера писателя Finroid. Помимо интересного мира с индивидуальной географией и многообразием народностей, его населяющих, "Заря Ауларона" включает в себя набор собственных правил, изменяющих правила оригинального DnD. Данная модификация понравится как новичкам, за изобретательный подход к магии, так и фанатам оригинального книжного цикла, благодаря бережному и точному переносу книг в формат НРИ.
+      </p>
+      <p>
+        Заря Ауларона продолжает историю книг, за счёт чего игроки оказываются не скованы оригиналом и могут сами строить ту историю, которая придётся им по вкусу.
+      </p>
+    </section>
+  </main>
+  <style>
+    #welcome-box {
+      transition: transform 0.4s, opacity 0.2s;
+    }
+  </style>
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+      }
+    });
+
+    // Parallax scroll effect for image and welcome-box
+    const headerImg = document.getElementById('main-header-img');
+    const welcomeBox = document.getElementById('welcome-box');
+    window.addEventListener('scroll', function() {
+      const maxScroll = 800; // px
+      const scrollY = window.scrollY;
+
+      // hat.jpg уезжает вверх и становится прозрачным
+      let translateY = -Math.min(scrollY, maxScroll) / 2;
+      headerImg.style.transform = `translateY(${translateY}px)`;
+      let opacity = 1 - (scrollY / maxScroll);
+      if (opacity < 0.2) opacity = 0.2;
+      if (opacity > 1) opacity = 1;
+      headerImg.style.opacity = opacity;
+
+      // welcome-box выезжает снизу и становится видимым
+      let boxTranslate = 60 - (scrollY / maxScroll) * 60; // от 60px до 0px
+      if (boxTranslate < 0) boxTranslate = 0;
+      let boxOpacity = (scrollY / (maxScroll * 0.5)); // появляется быстрее
+      if (boxOpacity > 1) boxOpacity = 1;
+      if (boxOpacity < 0) boxOpacity = 0;
+      welcomeBox.style.transform = `translateY(${boxTranslate}px)`;
+      welcomeBox.style.opacity = boxOpacity;
+    });
+  </script>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <img src="img/framelogo.svg" class="site-frame-logo">
+      <p>
+        <a href="mailto:robertpopit@gmail.com">robertpopit@gmail.com</a> | 
+        <a href="https://t.me/yourtelegram" target="_blank">Telegram</a>
+        <!-- Добавьте другие контакты по желанию -->
+      </p>
+      <p>© 2025 Заря Ауларона</p>
+    </div>
+  </footer>
+</body>
+</html> 

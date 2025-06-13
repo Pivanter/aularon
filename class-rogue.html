@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Плут | Заря Ауларона</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <div class="site-title">
+      <img src="img/logo.svg" alt="logo" class="site-logo">
+      ЗАРЯ АУЛАРОНА
+    </div>
+    <nav>
+      <a href="index.html" class="nav-btn">Главная</a>
+      <a href="about.html" class="nav-btn">О мире</a>
+      <a href="races.html" class="nav-btn">Виды</a>
+      <a href="classes.html" class="nav-btn active">Классы</a>
+      <a href="backgrounds.html" class="nav-btn">Предыстории</a>
+      <a href="traits.html" class="nav-btn">Черты</a>
+      <a href="enchants.html" class="nav-btn">Зачарования</a>
+    </nav>
+    <button class="hamburger" id="hamburger-btn" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+  <main>
+    <section class="welcome-box">
+    <h1>Плут</h1>
+    <p>Здесь будет подробное описание класса Плут, его особенностей, способностей и развития.</p>
+  </main>
+  <script>
+    const hamburger = document.getElementById('hamburger-btn');
+    const nav = document.querySelector('nav');
+    hamburger.addEventListener('click', () => {
+      nav.classList.toggle('open');
+    });
+    document.addEventListener('click', (e) => {
+      if (!hamburger.contains(e.target) && !nav.contains(e.target)) {
+        nav.classList.remove('open');
+      }
+    });
+  </script>
+  <footer class="site-footer">
+    <div class="footer-content">
+      <img src="img/framelogo.svg" class="site-frame-logo">
+      <p>
+        <a href="mailto:robertpopit@gmail.com">robertpopit@gmail.com</a> | 
+        <a href="https://t.me/yourtelegram" target="_blank">Telegram</a>
+        <!-- Добавьте другие контакты по желанию -->
+      </p>
+      <p>© 2025 Заря Ауларона</p>
+    </div>
+  </footer>
+</body>
+</html> 

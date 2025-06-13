@@ -1,0 +1,557 @@
+@font-face {
+  font-family: 'Celtes SP';
+  src: url('CeltesSP.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  background: #181818;
+  color: #f3f3f3;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  min-height: 100vh;
+  background-image: url('img/pattern.png');
+  background-repeat: repeat;
+  background-size: 500px;
+}
+
+header {
+  width: 100%;
+  background: #181818;
+  border-bottom: 2.5px solid #d6ff3c;
+  box-shadow: 0 2px 8px #d6ff3c33;
+  display: flex;
+  align-items: center;
+  padding: 0 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 75px;
+  min-height: 70px;
+  box-sizing: border-box;
+}
+
+.site-title {
+  font-size: 2.1em;
+  font-weight: normal;
+  color: #fff;
+  letter-spacing: 2px;
+  font-family: 'Celtes SP', Arial, sans-serif;
+  text-shadow: 0 0 8px #d6ff3c, 0 0 8px #d6ff3c44;
+  margin-top: 7px;
+  margin-right: 40px;
+  margin-left: 30px;
+  padding: 0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.site-logo {
+  margin-bottom: 5px;
+  width: 35px;
+  height: 35px;
+  display: inline-block;
+  filter: drop-shadow(0 0 4px #d6ff3c) drop-shadow(0 0 8px #d6ff3c44);
+}
+.site-frame-logo {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  opacity: 0.3;
+}
+
+#menu {
+  display: flex;
+  flex: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 0.5em;
+}
+#menu li {
+  padding: 0.7em 1.5em;
+  cursor: pointer;
+  color: #f3f3f3;
+  font-size: 1.1em;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  border: 1.5px solid transparent;
+  position: relative;
+}
+#menu li.active, #menu li:hover {
+  color: #181818;
+  background: #d6ff3c;
+  box-shadow: 0 0 4px #d6ff3c, 0 0 8px #d6ff3c44;
+  border-color: #d6ff3c;
+}
+
+main#content {
+  max-width: 900px;
+  margin: 3em auto 2em auto;
+  background: #232323;
+  border: 2px solid #d6ff3c;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 2.5em 2em;
+  min-height: 400px;
+}
+
+h1, h2, h3 {
+  color: #fff;
+  font-weight: normal;
+  font-family: 'Celtes SP', Arial, sans-serif;
+  text-shadow: 0 0 4px #d6ff3c, 0 0 8px #d6ff3c44;
+}
+
+/* Адаптивность */
+@media (max-width: 900px) {
+  main#content {
+    padding: 1.2em 0.7em;
+  }
+  .site-title {
+    font-size: 1.3em;
+  }
+  #menu li {
+    font-size: 1em;
+    padding: 0.7em 0.7em;
+  }
+}
+@media (max-width: 600px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 8px;
+    height: 60px;
+  }
+  .site-logo {
+    margin-bottom: 5px;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    filter: drop-shadow(0 0 4px #d6ff3c) drop-shadow(0 0 8px #d6ff3c44);
+  }
+  .site-title {
+    flex: 0 1 auto;
+    text-align: left;
+    font-size: 1.7em;
+    margin-left: 0px;
+  }
+  .hamburger {
+    position: static;
+    margin-top: 4px;
+    margin-right: 5px;
+  }
+  .nav-btn {
+    width: 100%;
+    font-size: 1em;
+    padding: 10px 0;
+    margin: 0 0 4px 0;
+    border-radius: 6px;
+    text-align: left;
+  }
+  .welcome-box {
+    padding: 8px 2vw;
+    font-size: 0.98em;
+    margin: 12px 0 0 0;
+    max-width: 100vw;
+    min-height: unset;
+    height: auto;
+    max-height: unset;
+    overflow: visible;
+  }
+  main#content {
+    padding: 0.5em 0.2em;
+    margin: 1em 0.2em 0.5em 0.2em;
+    max-width: 100vw;
+  }
+  .info-block {
+    padding: 8px 2vw;
+    font-size: 0.98em;
+    max-width: 100vw;
+    min-height: unset;
+    height: auto;
+    max-height: unset;
+    overflow: visible;
+  }
+  .class-table, .price-table {
+    font-size: 0.95em;
+    display: block;
+    overflow-x: auto;
+    width: 100%;
+  }
+  .class-table th, .class-table td, .price-table td {
+    padding: 0.5em 0.5em;
+    min-width: 80px;
+  }
+  .race-header {
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .race-block {
+    width: 100vw;
+    max-width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+}
+
+/* Стили для раскрывающихся race-block */
+.race-block {
+  width: 100%;
+  margin-bottom: 1em;
+  border-radius: 0;
+  overflow: hidden;
+  background: #232323;
+  border: 2px solid #d6ff3c;
+  box-shadow: none;
+  transition: box-shadow 0.2s;
+}
+.race-block:hover, .race-block:focus {
+  box-shadow: 0 0 4px #d6ff3c, 0 0 8px #d6ff3c44;
+}
+.race-header {
+  width: 100%;
+  background: #232323;
+  font-size: 1.3em;
+  font-weight: normal;
+  padding: 0.9em 1em;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  color: #d6ff3c;
+  font-family: 'Celtes SP', Arial, sans-serif;
+  text-shadow: 0 0 4px #d6ff3c, 0 0 8px #d6ff3c44;
+  border-radius: 0;
+  transition: background 0.2s, color 0.2s;
+}
+.race-block.open .race-header {
+  background: #181818;
+  color: #232323;
+}
+.race-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.4s;
+  background: #232323;
+  padding: 0 1.2em;
+}
+.race-block.open .race-content {
+  max-height: unset;
+  opacity: 1;
+  padding: 1.2em;
+}
+
+/* Отступ между абзацами */
+#content > p + p {
+  margin-top: 1.2em;
+}
+
+b, strong {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.info-block {
+  background: #181818;
+  border-left: 2px solid #d6ff3c;
+  color: #ffffff;
+  padding: 1.2em 2em;
+  margin: 2em auto;
+  text-align: left;
+  max-width: 600px;
+  font-size: 1.1em;
+  box-shadow: 0 0 10px #d6ff3c22;
+}
+
+.subrace-block {
+  margin-top: 1em;
+  background: #232323;
+}
+
+.subrace-header {
+  display: block;
+  width: 100%;
+  background: #232323;
+  border: none;
+  font-size: 1.3em;
+  font-family: 'Celtes SP', Arial, sans-serif;
+  color: #fff;
+  text-align: left;
+  padding: 0.7em 0.7em;
+  margin: 1.2em 0 0.2em 0;
+  cursor: pointer;
+  text-shadow: 0 0 4px #d6ff3c, 0 0 8px #d6ff3c44;
+  font-weight: normal;
+  outline: none;
+  border-radius: 0;
+  border-left: 4px solid #d6ff3c;
+  transition: background 0.2s, color 0.2s;
+}
+.subrace-content {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s cubic-bezier(.4,0,.2,1), opacity 0.4s;
+  background: #232323;
+  padding: 0 1.2em;
+}
+.subrace-block.open .subrace-content {
+  max-height: 3000px;
+  opacity: 1;
+  padding: 1.2em;
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 14px 28px;
+  border-radius: 7px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  font-family: inherit;
+  margin-right: 10px;
+  box-shadow: none;
+  filter: none;
+  min-width: 0;
+  min-height: 0;
+}
+.nav-btn.active,
+.nav-btn:hover {
+  background: #d6ff3c;
+  color: #181818;
+  box-shadow: 0 0 4px #d6ff3c, 0 0 8px #d6ff3c44;
+  filter: none;
+}
+
+nav {
+  gap: 0;
+  display: flex;
+  justify-content: flex-start;
+  flex: none;
+  margin-left: 65px;
+}
+
+.welcome-box {
+  background: #232323;
+  border: 2px solid #d6ff3c;
+  padding: 40px 40px 30px 40px;
+  max-width: 900px;
+  color: #fff;
+  font-size: 1.1em;
+  box-shadow: none;
+  margin: 60px auto 0 auto;
+  padding-top: 20px;
+  border-radius: 0;
+}
+html {
+  overflow-y: scroll;
+}
+
+.class-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.class-buttons-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+.class-btn {
+  width: 100%;
+  box-sizing: border-box;
+  border: 2px solid #d6ff3c;
+  background: #232323;
+  color: #d6ff3c;
+  padding: 1em 1em;
+  font-family: 'Celtes SP', Arial, sans-serif;
+  font-size: 1.3em;
+  font-weight: bold;
+  border-radius: 0;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+  text-align: left;
+  text-shadow: 0 0 4px #d6ff3c, 0 0 8px #d6ff3c44;
+  font-weight: normal;
+}
+
+.class-btn:hover, .class-btn:focus {
+  box-shadow: 0 0 4px #d6ff3c, 0 0 8px #d6ff3c44;
+}
+
+/* Компактная таблица цен внутри зачарований */
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #232323;
+  color: #f3f3f3;
+  font-size: 0.98em;
+  margin: 0;
+  box-shadow: none;
+}
+.price-table td {
+  padding: 0.2em 0.7em;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+/* Отступ между зачарованиями */
+.enchant-row {
+  border-bottom: 2px solid #d6ff3c44;
+}
+.enchant-row:last-child {
+  border-bottom: none;
+}
+
+/* Улучшение читаемости основной таблицы */
+.class-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2em 0;
+  background: #232323;
+  color: #f3f3f3;
+  font-size: 1.08em;
+  box-shadow: 0 0 10px #d6ff3c22;
+}
+.class-table th, .class-table td {
+  padding: 0.7em 1em;
+  text-align: left;
+  border: 1.5px solid #d6ff3c44;
+}
+.class-table th {
+  background: #d6ff3c;
+  color: #232323;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+/* Чередование цвета строк таблицы с учётом rowspans */
+.class-table tr.even-row td {
+  background: #181818;
+}
+.class-table tr.odd-row td {
+  background: #232323;
+}
+.skill-separator {
+  border: none;
+  border-top: 2px solid #d6ff3c;
+  margin: 0.5em 0 1.2em 0;
+  width: 100%;
+  background: none;
+  box-shadow: 0 0 10px #d6ff3c;
+}
+@media (max-width: 900px) {
+  .welcome-box {
+    padding: 20px 10px 15px 10px;
+    font-size: 1em;
+    margin: 30px 5px 0 5px;
+    max-width: 98vw;
+  }
+  main#content {
+    padding: 1em 0.5em;
+    margin: 2em 0.5em 1em 0.5em;
+    max-width: 98vw;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 400px) {
+  .site-title {
+    font-size: 0.9em;
+  }
+  .welcome-box {
+    font-size: 0.9em;
+    padding: 6px 1vw;
+  }
+}
+
+/* Стили для кнопки-гамбургера */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 32px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 20;
+}
+.hamburger span {
+  display: block;
+  width: 28px;
+  height: 4px;
+  margin: 4px 0;
+  background: #d6ff3c;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 600px) {
+  .hamburger {
+    display: flex !important;
+  }
+  header > nav {
+    display: none !important;
+    flex-direction: column;
+    width: 100%;
+    background: #181818;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 15;
+    border-bottom: 2px solid #d6ff3c;
+    margin-left: 0;
+  }
+  header > nav.open {
+    display: flex !important;
+  }
+  header {
+    position: relative;
+  }
+}
+/* Стили для футера */
+.site-footer {
+  background: #111111;
+  color: #f3f3f356;
+  padding: 40px 0 30px 0;
+  text-align: center;
+  font-size: 1.05em;
+  margin-top: 12em;
+}
+
+.site-footer a {
+  color: #d5ff3c57;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.site-footer a:hover {
+  color: #d6ff3c;
+}
+
+.footer-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+@media (max-width: 600px) {
+  .site-footer {
+    font-size: 0.98em;
+    padding: 20px 0 16px 0;
+  }
+}
